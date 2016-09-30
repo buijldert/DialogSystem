@@ -3,89 +3,89 @@
 <dialogues>
 	  <messages>
 		    <message id="1">
-			      <source>NPC</source>
-			      <text>Hi how are you?</text>
+			      <source>Shopkeep</source>
+			      <text>Hi can i help you?|</text>
           <destinations>
               <destination>2</destination>
               <destination>3</destination>
           </destinations>
           <options>
-			        <option>Im fine, how are you?</option>
-			        <option>Shut up!</option>
+			        <option>Yes i would like to purchase some weaponry.</option>
+			        <option>No thanks, im just having a look around.</option>
           </options>
 		    </message>
 		    <message id="2">
-			      <source>NPC</source>
-			      <text>Im fine too, hope you have a wonderful day!</text>
+			      <source>Shopkeep</source>
+			      <text>Ah yes and what sort of weaponry would you be wanting to purchase?</text>
           <destinations>
               <destination>4</destination>
               <destination>5</destination>
           </destinations>
           <options>
-			        <option>Thanks!</option>
-			        <option>Get out of my face!</option>
+			        <option>An axe.</option>
+			        <option>A sword.</option>
           </options>
 		    </message>
 		    <message id="3">
-			      <source>NPC</source>
-			      <text>Screw you!</text>
+			      <source>Shopkeep</source>
+			      <text>Im sorry sir but i cant have you loitering in my shop.</text>
           <destinations>
-              <destination>6</destination>
+              <destination>2</destination>
               <destination>7</destination>
           </destinations>
           <options>
-			        <option>I cant believe you said that!</option>
-			        <option>Screw you too</option>
+			        <option>Thats too bad, i would like to purchase some weaponry then.</option>
+			        <option>Alright, ill be on my way then.</option>
           </options>
 		    </message>
         <message id="4">
-			      <source>NPC</source>
-			      <text>Bye!</text>
+			      <source>Shopkeep</source>
+			      <text>I could sell you this double edged axe for 100 gold pieces.</text>
           <destinations>
-              <destination>8</destination>
+              <destination>6</destination>
           </destinations>
           <options>
-			        <option>Bye bye!</option>
+			        <option>Sold!</option>
           </options>
 		    </message>
         <message id="5">
-			      <source>NPC</source>
-			      <text>Ok then screw you asshole!</text>
+			      <source>Shopkeep</source>
+			      <text>Ah yes, this double edged sword is only 50 gold pieces</text>
           <destinations>
-              <destination>8</destination>
+              <destination>6</destination>
           </destinations>
           <options>
-			        <option>Bye bitch!</option>
+			        <option>Ill take it!</option>
           </options>
 		    </message>
         <message id="6">
-			      <source>NPC</source>
-			      <text>You better believe it!</text>
+			      <source>Shopkeep</source>
+			      <text>There you go sir, have a nice day!</text>
           <destinations>
               <destination>8</destination>
           </destinations>
           <options>
-			        <option>Fine, bye asshole!</option>
+			        <option>Thanks, you too!</option>
           </options>
 		    </message>
         <message id="7">
-			      <source>NPC</source>
-			      <text>Yeah yeah get outta my face</text>
+			      <source>Shopkeep</source>
+			      <text>Alright sir, goodbye.</text>
           <destinations>
               <destination>8</destination>
           </destinations>
           <options>
-			        <option>Fuck you!</option>
+			        <option>Goodbye sir.</option>
           </options>
 		    </message>
         <message id="8">
 			      <source>System</source>
-			      <text>Dialogue Done</text>
+			      <text>Dialogue Done.</text>
           <destinations>
               <destination>0</destination>
           </destinations>
           <options>
-			        <option>Okay</option>
+			        <option>Okay.</option>
           </options>
 		    </message>
 	    </messages>

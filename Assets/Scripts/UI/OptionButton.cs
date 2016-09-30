@@ -3,17 +3,20 @@ using System.Collections;
 
 public class OptionButton : MonoBehaviour {
 
+    //set the destination of the buttons
     [SerializeField]private int _destination;
     private int[] _destinations;
-
+    
+    //load message delegate
     public delegate void LoadNextMesssageAction(int destination);
     public static event LoadNextMesssageAction OnLoadNextMessage;
 
     void OnEnable()
     {
-        DialogueLoader.OnSendDestinations += ReceiveDestinations;
+        MessageLoader.OnSendDestinations += ReceiveDestinations;
     }
 
+    //when optionbutton is clicked load the response
     public void StartResponse()
     {
         if(OnLoadNextMessage != null)
@@ -22,6 +25,7 @@ public class OptionButton : MonoBehaviour {
         }
     }
 
+    //receive the destinations from another script
     private void ReceiveDestinations(int[] destinations)
     {
         _destinations = destinations;
@@ -29,6 +33,6 @@ public class OptionButton : MonoBehaviour {
 
     void OnDisable()
     {
-        DialogueLoader.OnSendDestinations += ReceiveDestinations;
+        MessageLoader.OnSendDestinations += ReceiveDestinations;
     }
 }
