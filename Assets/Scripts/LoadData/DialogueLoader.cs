@@ -10,7 +10,7 @@ public class DialogueLoader : MonoBehaviour {
     [SerializeField]private Button[] _optionsButtons;
     private Message _currentMessage;
     private DialogueContainer _dc;
-    private bool _destinationSent;
+    private bool _destinationSent = false;
 
     public delegate void SendDestinationsAction(int[] destinations);
     public static event SendDestinationsAction OnSendDestinations;
@@ -20,7 +20,7 @@ public class DialogueLoader : MonoBehaviour {
     {
         _dc = DialogueContainer.Load(_xmlFile);
         StartDialogueButton.OnStartDialogue += LoadMessage;
-        ResponseButton.OnLoadNextMessage += LoadMessage;
+        OptionButton.OnLoadNextMessage += LoadMessage;
         HideOptionsButtons();
     }
 
@@ -30,23 +30,23 @@ public class DialogueLoader : MonoBehaviour {
         _destinationSent = false;
         foreach (Message message in _dc.messages)
         {
-            if(message.id == id)
+            if (message.id == id)
             {
                 _currentMessage = message;
                 if (OnSendDestinations != null && _destinationSent == false)
                 {
-                    OnSendDestinations(_currentMessage.destinations);
+                    OnSendDestinations(_currentMessage.Destinations);
                     _destinationSent = true;
                 }
 
-                _sourceText.text = message.source;
-                _messageText.text = message.text;
-                if(message.options.Length > 0)
+                _sourceText.text = message.Source;
+                _messageText.text = message.Text;
+                if(message.Options.Length > 0)
                 {
-                    for (int i = 0; i < message.options.Length; i++)
+                    for (int i = 0; i < message.Options.Length; i++)
                     {
                         _optionsButtons[i].gameObject.SetActive(true);
-                        _optionsButtons[i].gameObject.GetComponentInChildren<Text>().text = message.options[i];
+                        _optionsButtons[i].gameObject.GetComponentInChildren<Text>().text = message.Options[i];
                     }
                 }
                 else
@@ -68,6 +68,6 @@ public class DialogueLoader : MonoBehaviour {
     void OnDisable()
     {
         StartDialogueButton.OnStartDialogue -= LoadMessage;
-        ResponseButton.OnLoadNextMessage -= LoadMessage;
+        OptionButton.OnLoadNextMessage -= LoadMessage;
     }
 }

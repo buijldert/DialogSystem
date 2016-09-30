@@ -22,20 +22,20 @@
               <destination>5</destination>
           </destinations>
           <options>
-			        <option>thanks!</option>
-			        <option>get out of my face!</option>
+			        <option>Thanks!</option>
+			        <option>Get out of my face!</option>
           </options>
 		    </message>
 		    <message id="3">
 			      <source>NPC</source>
-			      <text>screw you!</text>
+			      <text>Screw you!</text>
           <destinations>
               <destination>6</destination>
               <destination>7</destination>
           </destinations>
           <options>
-			        <option>i cant believe you said that!</option>
-			        <option>screw you too</option>
+			        <option>I cant believe you said that!</option>
+			        <option>Screw you too</option>
           </options>
 		    </message>
         <message id="4">
@@ -45,7 +45,7 @@
               <destination>8</destination>
           </destinations>
           <options>
-			        <option>Bye Bye!</option>
+			        <option>Bye bye!</option>
           </options>
 		    </message>
         <message id="5">
@@ -65,7 +65,7 @@
               <destination>8</destination>
           </destinations>
           <options>
-			        <option>Fine bye asshole!</option>
+			        <option>Fine, bye asshole!</option>
           </options>
 		    </message>
         <message id="7">

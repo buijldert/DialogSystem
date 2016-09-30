@@ -9,17 +9,18 @@ public class Message
     public int id;
 
     [XmlElement("source")]
-    public string source;
+    public string Source { get; set; }
+    //public string source;
 
     [XmlElement("text")]
-    public string text;
+    public string Text { get; set; }
     
     [XmlArray("options")]
     [XmlArrayItem("option")]
-    public string[] options;
+    public string[] Options { get; set; }
 
     [XmlArray("destinations")]
     [XmlArrayItem("destination")]
-    public int[] destinations;
+    public int[] Destinations { get; set; }
 }
     

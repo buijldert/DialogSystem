@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ResponseButton : MonoBehaviour {
+public class OptionButton : MonoBehaviour {
 
     [SerializeField]private int _destination;
     private int[] _destinations;
